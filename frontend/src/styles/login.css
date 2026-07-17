@@ -1,0 +1,517 @@
+/* ===================================================
+   SMART EMS LOGIN UI
+   Premium SaaS Design
+=================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+    overflow:hidden;
+}
+
+/* ===================================================
+   MAIN PAGE
+=================================================== */
+
+.login-page{
+    width:100%;
+    height:100vh;
+    display:flex;
+    background:
+    radial-gradient(circle at top left,#2563EB 0%,transparent 30%),
+    radial-gradient(circle at bottom right,#1E40AF 0%,transparent 35%),
+    linear-gradient(135deg,#08142B,#0F172A,#123A84);
+    position:relative;
+}
+
+/* Floating Glow */
+
+.login-page::before{
+
+    content:"";
+
+    width:500px;
+
+    height:500px;
+
+    position:absolute;
+
+    left:-150px;
+
+    top:-150px;
+
+    border-radius:50%;
+
+    background:rgba(37,99,235,.20);
+
+    filter:blur(90px);
+
+}
+
+.login-page::after{
+
+    content:"";
+
+    width:450px;
+
+    height:450px;
+
+    position:absolute;
+
+    right:-100px;
+
+    bottom:-120px;
+
+    border-radius:50%;
+
+    background:rgba(96,165,250,.18);
+
+    filter:blur(80px);
+
+}
+
+/* ===================================================
+   HERO
+=================================================== */
+
+.login-hero{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:80px;
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+.hero-content{
+
+    width:700px;
+
+}
+
+.hero-content h1{
+
+    color:white;
+
+    font-size:64px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.hero-content h2{
+
+    color:#BFDBFE;
+
+    font-size:30px;
+
+    margin-bottom:18px;
+
+    font-weight:500;
+
+}
+
+.hero-content p{
+
+    color:#D1D5DB;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    margin-bottom:55px;
+
+}
+/* ===================================================
+   STATS GRID
+=================================================== */
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:28px;
+
+}
+
+/* ===================================================
+   PREMIUM CARD
+=================================================== */
+
+.stats-card{
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:24px;
+
+    padding:30px;
+
+    transition:.4s;
+
+    cursor:pointer;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 12px 35px rgba(0,0,0,.28);
+
+}
+
+/* Glowing Line */
+
+.stats-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:100%;
+
+    height:4px;
+
+    left:0;
+
+    top:0;
+
+    background:
+    linear-gradient(
+    90deg,
+    #60A5FA,
+    #2563EB,
+    #93C5FD
+    );
+
+}
+
+.stats-card:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.03);
+
+    background:rgba(255,255,255,.12);
+
+    box-shadow:
+    0 20px 40px rgba(37,99,235,.35);
+
+}
+
+.icon{
+
+    font-size:38px;
+
+    color:#93C5FD;
+
+    margin-bottom:18px;
+
+}
+
+.stats-card h3{
+
+    color:white;
+
+    font-size:32px;
+
+    margin-bottom:8px;
+
+    font-weight:700;
+
+}
+
+.stats-card span{
+
+    color:#CBD5E1;
+
+    font-size:16px;
+
+}
+
+/* ===================================================
+   FLOAT ANIMATION
+=================================================== */
+
+.stats-card:nth-child(1){
+
+    animation:
+    floatCard 4s ease-in-out infinite;
+
+}
+
+.stats-card:nth-child(2){
+
+    animation:
+    floatCard 5s ease-in-out infinite;
+
+}
+
+.stats-card:nth-child(3){
+
+    animation:
+    floatCard 6s ease-in-out infinite;
+
+}
+
+.stats-card:nth-child(4){
+
+    animation:
+    floatCard 7s ease-in-out infinite;
+
+}
+
+@keyframes floatCard{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+/* ===================================================
+   LOGIN PANEL
+=================================================== */
+
+.login-form-container{
+
+    width:500px;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    z-index:20;
+
+    box-shadow:
+    -20px 0 60px rgba(0,0,0,.18);
+
+}
+
+/* ===================================================
+   LOGIN CARD
+=================================================== */
+
+.login-card{
+
+    width:420px;
+
+    background:white;
+
+    border-radius:28px;
+
+    padding:45px;
+
+    box-shadow:
+    0 25px 70px rgba(0,0,0,.12);
+
+    animation:
+    fadeUp .8s ease;
+
+}
+
+.login-card h1{
+
+    font-size:38px;
+
+    color:#0F172A;
+
+    margin-bottom:8px;
+
+}
+
+.login-card p{
+
+    color:#64748B;
+
+    margin-bottom:35px;
+
+}
+
+/* ===================================================
+   INPUTS
+=================================================== */
+
+.input-group{
+
+    margin-bottom:22px;
+
+}
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:#334155;
+
+    font-weight:600;
+
+}
+
+.input-box{
+
+    display:flex;
+
+    align-items:center;
+
+    background:#F8FAFC;
+
+    border:2px solid transparent;
+
+    border-radius:14px;
+
+    padding:14px 16px;
+
+    transition:.3s;
+
+}
+
+.input-box:hover{
+
+    border-color:#2563EB;
+
+}
+
+.input-box:focus-within{
+
+    border-color:#2563EB;
+
+    background:white;
+
+}
+
+.input-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    font-size:15px;
+
+    margin-left:12px;
+
+}
+
+.input-icon{
+
+    color:#2563EB;
+
+    font-size:18px;
+
+}
+
+/* ===================================================
+   LOGIN BUTTON
+=================================================== */
+
+.login-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #2563EB,
+    #1D4ED8
+    );
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    margin-top:15px;
+
+}
+
+.login-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 12px 25px rgba(37,99,235,.35);
+
+}
+
+/* ===================================================
+   ANIMATION
+=================================================== */
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
