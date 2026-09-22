@@ -1,4 +1,5 @@
  Smart Employee Management System (Smart EMS)
+<br>
 Author- shivamani
 A full-stack Employee Management System built using the MERN stack with AI-powered features to simplify employee management, attendance tracking, leave processing, and performance analysis.
 
